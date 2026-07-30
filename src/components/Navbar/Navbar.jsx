@@ -19,7 +19,7 @@ function Navbar({ theme, toggleTheme }) {
 <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
 </ul>
  
-                <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
+                <div style={{ display: 'flex', gap: '15px', alignItems: 'center'}}>
 <button className="theme-toggle" onClick={toggleTheme}>
 
                         {theme === "dark" ? "🌙" : "☀️"}
