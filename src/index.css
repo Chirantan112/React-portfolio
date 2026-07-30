@@ -186,7 +186,39 @@ body[data-theme="dark"] .theme-toggle {
     color: #ffffff;
     border: 1px solid #666666;
 }
- 
+
+/*START*/
+/* === MINIMAL TRANSPARENT THEME TOGGLE === */
+.theme-toggle {
+    background: transparent !important;
+    border: none !important;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    outline: none;
+    line-height: 1;
+}
+
+/* Subtle scale effect on hover without any circular background */
+.theme-toggle:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 6px rgba(241, 143, 1, 0.6)); /* Subtle glow using your accent color */
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Ensure no background overrides kick in from dark mode rules */
+body[data-theme="dark"] .theme-toggle {
+    background: transparent !important;
+    border: none !important;
+}
+
 
 body {
     font-family: var(--font-main);
